@@ -2,7 +2,7 @@ package gregtech.client;
 
 import codechicken.lib.texture.TextureUtils;
 import gregtech.api.GTValues;
-import gregtech.api.fluids.MetaFluids;
+import gregtech.api.fluids.GTFluidRegistrator;
 import gregtech.api.items.metaitem.MetaOreDictItem;
 import gregtech.api.items.toolitem.IGTTool;
 import gregtech.api.terminal.TerminalRegistry;
@@ -66,7 +66,9 @@ import net.minecraftforge.oredict.OreDictionary;
 import paulscode.sound.SoundSystemConfig;
 
 import javax.annotation.Nonnull;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 @SideOnly(Side.CLIENT)
 @Mod.EventBusSubscriber(Side.CLIENT)
@@ -129,8 +131,7 @@ public class ClientProxy extends CommonProxy {
         FluidPipeRenderer.INSTANCE.preInit();
         ItemPipeRenderer.INSTANCE.preInit();
         MetaEntities.initRenderers();
-        MetaFluids.initIconFluidSprites();
-        TextureUtils.addIconRegister(MetaFluids::registerSprites);
+        TextureUtils.addIconRegister(GTFluidRegistrator::registerSprites);
     }
 
     @Override
@@ -208,7 +209,7 @@ public class ClientProxy extends CommonProxy {
             tooltips = FluidTooltipUtil.getFluidTooltip(itemStack.getTagCompound().getString("FluidName"));
 
             // GTCE Cells, Forestry cans, some other containers
-            if (tooltips == null || tooltips.size() == 0) {
+            if (tooltips == null || tooltips.isEmpty()) {
                 //if (itemStack.getItem() instanceof ItemBlock && ((ItemBlock) itemStack.getItem()).getBlock() == GregTechAPI.MACHINE && itemStack.getItemDamage())
                 NBTTagCompound compound = itemStack.getTagCompound();
                 if (compound != null && compound.hasKey(FluidHandlerItemStack.FLUID_NBT_KEY, Constants.NBT.TAG_COMPOUND)) {

@@ -11,8 +11,8 @@ import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MaterialTree implements IRecipeWrapper {
     private final static ImmutableList<OrePrefix> PREFIXES = ImmutableList.of(
@@ -71,7 +71,7 @@ public class MaterialTree implements IRecipeWrapper {
         }
 
         List<FluidStack> matFluidsStack = new ArrayList<>();
-        if (material.hasProperty(PropertyKey.FLUID)) {
+        if (material.hasProperty(PropertyKey.ADV_FLUID)) {
             matFluidsStack.add(material.getFluid(1000));
         }
         this.fluidInputs.add(matFluidsStack);
