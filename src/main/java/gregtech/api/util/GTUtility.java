@@ -1117,4 +1117,8 @@ public class GTUtility {
         }
         return set;
     }
+
+    public static boolean isTemperatureCryogenic(int temperature) {
+        return temperature < 120;
+    }
 }

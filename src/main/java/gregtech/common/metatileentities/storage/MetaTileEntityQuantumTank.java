@@ -5,6 +5,7 @@ import codechicken.lib.render.CCRenderState;
 import codechicken.lib.render.pipeline.ColourMultiplier;
 import codechicken.lib.render.pipeline.IVertexOperation;
 import codechicken.lib.vec.Matrix4;
+import gregtech.api.capability.FluidContainmentInfo;
 import gregtech.api.capability.GregtechTileCapabilities;
 import gregtech.api.capability.IActiveOutputSide;
 import gregtech.api.capability.impl.*;
@@ -414,7 +415,20 @@ public class MetaTileEntityQuantumTank extends MetaTileEntity implements ITiered
 
     @Override
     public ICapabilityProvider initItemStackCapabilities(ItemStack itemStack) {
-        return new ThermalFluidHandlerItemStack(itemStack, maxFluidCapacity, Integer.MAX_VALUE, true, true, true, true);
+        return new AdvancedFluidHandlerItemStack(itemStack, maxFluidCapacity, new FluidContainmentInfo.Builder()
+                .liquids()
+                .gases()
+                .plasmas()
+                .cryogenics()
+                .acids()
+                .superacids()
+                .temperature(Integer.MAX_VALUE)
+                .build()) {
+            @Override
+            public boolean canHoldFluid(@Nullable FluidStack stack) {
+                return true;
+            }
+        };
     }
 
     @Override
