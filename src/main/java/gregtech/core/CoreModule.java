@@ -15,6 +15,7 @@ import gregtech.api.modules.GregTechModule;
 import gregtech.api.modules.IGregTechModule;
 import gregtech.api.pipenet.longdist.LongDistanceNetwork;
 import gregtech.api.pipenet.longdist.LongDistancePipeType;
+import gregtech.api.recipes.ModHandler;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.recipeproperties.TemperatureProperty;
 import gregtech.api.unification.OreDictUnifier;
@@ -38,6 +39,7 @@ import gregtech.common.command.worldgen.CommandWorldgen;
 import gregtech.common.covers.CoverBehaviors;
 import gregtech.common.covers.filter.FilterTypeRegistry;
 import gregtech.common.items.MetaItems;
+import gregtech.common.items.ToolItems;
 import gregtech.common.metatileentities.MetaTileEntities;
 import gregtech.common.worldgen.LootTableHelper;
 import gregtech.core.advancement.AdvancementTriggers;
@@ -101,7 +103,6 @@ public class CoreModule implements IGregTechModule {
         /* init GroovyScript compat */
         GroovyScriptCompat.init();
 
-
         /* Start UI Factory Registration */
         UI_FACTORY_REGISTRY.unfreeze();
         logger.info("Registering GTCEu UI Factories");
@@ -147,7 +148,9 @@ public class CoreModule implements IGregTechModule {
 
         MetaBlocks.init();
         MetaItems.init();
+        ToolItems.init();
         MetaFluids.init();
+        ModHandler.init();
 
         /* Start MetaTileEntity Registration */
         MTE_REGISTRY.unfreeze();
@@ -227,7 +230,7 @@ public class CoreModule implements IGregTechModule {
     }
 
     @Optional.Method(modid = GTValues.MODID_CT)
-    private void runEarlyCraftTweakerScripts() {
+    private static void runEarlyCraftTweakerScripts() {
         CraftTweakerAPI.tweaker.loadScript(false, "gregtech");
     }
 
@@ -245,6 +248,8 @@ public class CoreModule implements IGregTechModule {
                 TemperatureProperty.registerCoilType(value.getCoilTemperature(), value.getMaterial(), name);
             }
         }
+
+        ModHandler.postInit();
     }
 
     @Override
