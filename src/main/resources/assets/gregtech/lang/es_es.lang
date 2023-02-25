@@ -106,12 +106,12 @@ gregtech.multiblock.extreme_combustion_engine.description=El Motor Extremo de Co
 gregtech.multiblock.distillation_tower.description=La Torre de Destilación es una estructura multibloque empleada para destilar los diferentes tipos de Petróleo y algunos de sus derivados. Cada capa debe tener exactamente una escotilla de salida, empezando por la segunda inferior. Por la capa inferior se pueden retirar objetos e introducir fluidos en cualquier posición.
 gregtech.multiblock.electric_blast_furnace.description=El Alto Horno Eléctrico (EBF en Inglés) es una estructura multibloque utilizada para fundir aleaciones, cocinar metales o refinar menas. Se necesita para la obtención de metales y aleaciones de alto nivel, como el Aluminio, Acero Inoxidable, Titanio y Aleación de Naquadah.
 gregtech.multiblock.multi_furnace.description=La Fundición Multiple es una estructura multibloque utilizada para fundir cantidades masivas de material a la vez. Los diferentes grados de bobinas proporcionan un aumento de velocidad y una mejora de la eficiencia energética. 32 es el numero de base de objetos fundidos por operación, y este puede ser multiplicado utilizando bobinas de grado superior.
-gregtech.multiblock.large_boiler.description=Las Calderas Grandes son multibloques que generan Vapor a partir de una fuente de energía y agua. Esta fuente de energía puede ser o bien cualquier Combustible Solido con un tiempo de quemado, o bien Gasoil/Combustible semilíquido.Su ritmo puede ser regulado en incrementos del 5%% para reducir la producción de Vapor y el consumo de Combustible.
+gregtech.multiblock.large_boiler.description=Las Calderas Grandes son multibloques que generan Vapor a partir de una fuente de energía y agua. Esta fuente de energía puede ser o bien cualquier Combustible Solido con un tiempo de quemado, o bien Gasoil/Combustible semilíquido. Su ritmo puede ser regulado en incrementos del 5%% para reducir la producción de Vapor y el consumo de Combustible.
 gregtech.multiblock.large_turbine.description=Las Turbinas Grandes son multibloques que generan electricidad a partir de vapor, gases o plasma haciendo rotar del rotor de la turbina. La producción de energía depende en la eficiencia del rotor y la velocidad de rotación de la turbina. Las Carcasas de Transmisión se utilizan en el centro de la estructura.
 gregtech.multiblock.assembly_line.description=La Línea de Ensamblado es una gran estructura multibloque que consisten de entre 5 y 16 "segmentos". En teoría, actúa como una Maquina de Ensamblado grande, empleada para producir componentes avanzados.
-gregtech.multiblock.fusion_reactor.luv.description=El Reactor de Fusión Mark 1 es una gran estructura multibloque empleada para fusionar elementos a otros mas pesados. Puede emplear solo Escotillas de Energía de grado VA, MPC y UV. Por cada Escotilla que tiene, su reserva incrementa en 10M EU, hasta un máximo de 160M.
-gregtech.multiblock.fusion_reactor.zpm.description=El Reactor de Fusión Mark 2 es una gran estructura multibloque empleada para fusionar elementos a otros mas pesados. Puede emplear solo Escotillas de Energía de grado MPC y UV. Por cada Escotilla que tiene, su reserva incrementa en 20M EU, hasta un máximo de 320M.
-gregtech.multiblock.fusion_reactor.uv.description=El Reactor de Fusión Mark 3 es una gran estructura multibloque empleada para fusionar elementos a otros mas pesados. Puede emplear solo Escotillas de Energía de grado UV. Por cada Escotilla que tiene, su reserva incrementa en 40M EU, hasta un máximo de 640M.
+gregtech.multiblock.fusion_reactor.luv.description=El Reactor de Fusión Mark 1 es una gran estructura multibloque empleada para fusionar elementos a otros mas pesados. Puede emplear solo Tomas de Energía de grado VA, MPC y UV. Por cada Toma que tenga, su reserva incrementa en 10M EU, hasta un máximo de 160M.
+gregtech.multiblock.fusion_reactor.zpm.description=El Reactor de Fusión Mark 2 es una gran estructura multibloque empleada para fusionar elementos a otros mas pesados. Puede emplear solo Tomas de Energía de grado MPC y UV. Por cada Toma que tenga, su reserva incrementa en 20M EU, hasta un máximo de 320M.
+gregtech.multiblock.fusion_reactor.uv.description=El Reactor de Fusión Mark 3 es una gran estructura multibloque empleada para fusionar elementos a otros mas pesados. Puede emplear solo Tomas de Energía de grado UV. Por cada Toma que tenga, su reserva incrementa en 40M EU, hasta un máximo de 640M.
 gregtech.multiblock.fusion_reactor.energy=EU: %d / %d
 gregtech.multiblock.fusion_reactor.heat=Calor: %d
 gregtech.multiblock.large_chemical_reactor.description=El Gran Reactor Químico ejecuta reacciones químicas con una eficiencia energética del 100%%. Cada nivel de Overclockeo multiplica tanto la velocidad com la energía por 4. La estructura requiere exactamente 1 Bloque de Bobina de Cuproníquel, que se debe colocar adyacente a la carcasa de tuberías de PTFE ubicada en el centro
@@ -931,7 +931,7 @@ item.gt.tool.mortar.name=Mortero de %s
 item.gt.tool.wire_cutter.name=Alicates de %s
 item.gt.tool.knife.name=Cuchillo de %s
 item.gt.tool.butchery_knife.name=Cuchillo de Carnicero de%s
-item.gt.tool.butchery_knife.tooltip=§8Tiene una lenta taza de Ataque
+item.gt.tool.butchery_knife.tooltip=§8Tiene una lento ritmo de Ataque
 item.gt.tool.scythe.name=Hoz de %s
 item.gt.tool.scythe.tooltip=§8¿Sense? ¡Oh, conque eres de la vieja escuela!
 item.gt.tool.rolling_pin.name=Rodillo de Cocina de %s
@@ -1066,46 +1066,46 @@ metaarmor.jetpack.hover.disable=Jetpack: Modo de Flotación Desactivado
 
 metaarmor.jetpack.emergency_hover_mode=¡Modo de Flotación de Energencia Activado!
 
-metaarmor.nms.share.enable=NanoMuscle™ Suite: Charging Enabled
-metaarmor.nms.share.disable=NanoMuscle™ Suite: Charging Disabled
-metaarmor.nms.share.error=NanoMuscle™ Suite: §cNot enough power for charging!
+metaarmor.nms.share.enable=Traje NanoMuscle™: Carga Activada
+metaarmor.nms.share.disable=Traje NanoMuscle™: Carga Desactivada
+metaarmor.nms.share.error=Traje NanoMuscle™: §c¡No hay suficiente energía!
 
-metaarmor.qts.share.enable=QuarkTech™ Suite: Charging Enabled
-metaarmor.qts.share.disable=QuarkTech™ Suite: Charging Disabled
-metaarmor.qts.share.error=QuarkTech™ Suite: §cNot enough power for charging!
+metaarmor.qts.share.enable=Traje QuarkTech™: Carga Activada
+metaarmor.qts.share.disable=Traje QuarkTech™: Carga Desactivada
+metaarmor.qts.share.error=Traje QuarkTech™: §c¡No hay suficiente energía!
 
-metaarmor.message.nightvision.enabled=§bNightVision: §aOn
-metaarmor.message.nightvision.disabled=§bNightVision: §cOff
-metaarmor.message.nightvision.error=§cNot enough power!
+metaarmor.message.nightvision.enabled=§bVisión Nocturna: §aActivada
+metaarmor.message.nightvision.disabled=§bVisión Nocturna: §cDesactivada
+metaarmor.message.nightvision.error=§c¡No hay suficiente energía!
 
-metaarmor.tooltip.stepassist=Provides Step-Assist
-metaarmor.tooltip.speed=Increases Running Speed
-metaarmor.tooltip.jump=Increases Jump Height and Distance
-metaarmor.tooltip.falldamage=Nullifies Fall Damage
-metaarmor.tooltip.potions=Nullifies Harmful Effects
-metaarmor.tooltip.burning=Nullifies Burning
-metaarmor.tooltip.breath=Replenishes Underwater Breath Bar
-metaarmor.tooltip.autoeat=Replenishes Food Bar by Using Food from Inventory
+metaarmor.tooltip.stepassist=Provee Asistencia al Caminar
+metaarmor.tooltip.speed=Incrementa la Velocidad de Carrera
+metaarmor.tooltip.jump=Incrementa la Altura y Distancia de Salto
+metaarmor.tooltip.falldamage=Elimina el Daño por Caída
+metaarmor.tooltip.potions=Elimina Efectos Negativos
+metaarmor.tooltip.burning=Elimina el Quemado
+metaarmor.tooltip.breath=Rellena la Barra de Respiración Bajo el Agua
+metaarmor.tooltip.autoeat=Rellena la Barra de Comida con Comida del Inventario
 
-metaarmor.hud.status.enabled=§aON
-metaarmor.hud.status.disabled=§cOFF
-metaarmor.hud.energy_lvl=Energy Level: %s
-metaarmor.hud.fuel_lvl=Fuel Level: %s
-metaarmor.hud.hover_mode=Hover Mode: %s
-mataarmor.hud.supply_mode=Supply Mode: %s
-metaarmor.hud.gravi_engine=GraviEngine: %s
+metaarmor.hud.status.enabled=§aActivado
+metaarmor.hud.status.disabled=§cDesactivado
+metaarmor.hud.energy_lvl=Nivel de Energía: %s
+metaarmor.hud.fuel_lvl=Nivel de Combustible: %s
+metaarmor.hud.hover_mode=Modo de Flotación: %s
+mataarmor.hud.supply_mode=Modo de Carga: %s
+metaarmor.hud.gravi_engine=Motor Gravitatorio: %s
 
-metaarmor.energy_share.error=Energy Supply: §cNot enough power for gadgets charging!
-metaarmor.energy_share.enable=Energy Supply: Gadgets charging enabled
-metaarmor.energy_share.disable=Energy Supply: Gadgets charging disabled
-metaarmor.energy_share.tooltip=Supply mode: %s
-metaarmor.energy_share.tooltip.guide=To change mode shift-right click when holding item
+metaarmor.energy_share.error=Porvisión de Energía: §c¡No hay suficiente energía para cargar artilugios!
+metaarmor.energy_share.enable=Porvisión de Energía: Carga de Artilugios Activada
+metaarmor.energy_share.disable=Porvisión de Energía: Carga de Artilugios Desactivada
+metaarmor.energy_share.tooltip=Modo de Carga: %s
+metaarmor.energy_share.tooltip.guide=Para cambiar modos usa SHIFT + Click Derecho con el objeto en mano
 
-metaitem.record.sus.name=Music Disc
+metaitem.record.sus.name=Disco de Música
 metaitem.record.sus.tooltip=§7Leonz - Among Us Drip
 
-metaitem.nan.certificate.name=Certificate of Not Being a Noob Anymore
-metaitem.nan.certificate.tooltip=Challenge Accepted!
+metaitem.nan.certificate.name=Certificado de "Ya No Mas un Noob" 
+metaitem.nan.certificate.tooltip=¡Desafío Aceptado!
 
 metaitem.fertilizer.name=Fertilizer
 
